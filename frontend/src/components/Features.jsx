@@ -37,7 +37,7 @@ const features = [
   },
 ];
 
-export function Features() {
+export default function Features() {
   return (
     <section id="features" className="py-24 relative">
       {/* Background */}

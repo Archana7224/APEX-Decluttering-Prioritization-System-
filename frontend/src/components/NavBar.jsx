@@ -10,7 +10,7 @@ const navLinks = [
   { name: "Support", href: "#support" },
 ];
 
-export function Navbar() {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { theme, toggleTheme } = useTheme();
 

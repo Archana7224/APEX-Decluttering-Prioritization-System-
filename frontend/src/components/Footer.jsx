@@ -11,7 +11,7 @@ const socialLinks = [
   { label: "GitHub", href: "#" },
 ];
 
-export function Footer() {
+export default function Footer() {
   return (
     <footer className="border-t border-border py-16">
       <div className="container mx-auto px-4">

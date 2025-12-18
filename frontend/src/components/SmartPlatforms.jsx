@@ -15,7 +15,7 @@ const platforms = [
   },
 ];
 
-export function SmartPlatforms() {
+export default function SmartPlatforms() {
   return (
     <section id="platforms" className="relative overflow-hidden py-24">
       {/* Background Glow */}
