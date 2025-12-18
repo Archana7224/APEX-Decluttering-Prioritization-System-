@@ -216,9 +216,9 @@ TWITTER_API_KEY=your_twitter_api_key
 
 | Name             | Role                        | GitHub                |
 |------------------|-----------------------------|-----------------------|
-| Aaditya Kapoor   | Team Lead & Frontend Dev    | [@aaditya-kapoor](https://github.com/aaditya2107) |
+| Aaditya Kapoor   | Team Lead & UI /UX Designer | [@aaditya-kapoor](https://github.com/aaditya2107) |
 | Anshul Kushwaha  | Documentation & Presentation| [@anshul-kushwaha](https://github.com/anshul2045) |
-| Aachal Patil     | UI/UX Designer              | [@aachal-patil](https://github.com/aachalpatil0403) |
+| Aachal Patil     | Frontend Developer          | [@aachal-patil](https://github.com/aachalpatil0403) |
 | Archana Nair     | Backend Developer           | [@Archana7224](https://github.com/Archana7224) |
 
 ---
@@ -236,4 +236,5 @@ TWITTER_API_KEY=your_twitter_api_key
 
 This project is licensed under the MIT License – free to use, modify, and distribute.  
 See the [LICENSE](LICENSE) file for more details.
+
 
