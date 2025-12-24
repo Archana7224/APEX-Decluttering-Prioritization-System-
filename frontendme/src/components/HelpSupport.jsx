@@ -1,5 +1,5 @@
 import { MessageCircle, BookOpen, Video, Mail } from "lucide-react";
-import React from "react";
+
 const supportOptions = [
   {
     icon: MessageCircle,

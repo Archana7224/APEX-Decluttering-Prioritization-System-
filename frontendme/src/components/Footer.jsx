@@ -1,4 +1,3 @@
-import React from "react";
 const footerLinks = {
   Product: ["Features", "Pricing", "Integrations", "Changelog"],
   Company: ["About", "Blog", "Careers", "Contact"],

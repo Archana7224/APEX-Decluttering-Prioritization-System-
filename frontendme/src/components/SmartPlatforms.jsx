@@ -1,5 +1,5 @@
 import { Check, Mail } from "lucide-react";
-import React from "react";
+
 const platforms = [
   {
     name: "Gmail",

@@ -1,4 +1,5 @@
-import React,{ useState } from "react";
+import React from "react";
+import { useState } from "react";
 import { Menu, X, Sun, Moon, Mail } from "lucide-react";
 import { useTheme } from "./ThemeProvider";
 // import { Button } from "components/ui/button";
@@ -12,7 +13,7 @@ const navLinks = [
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const { theme, toggleTheme } = useState("");
+  const { theme, toggleTheme } = useTheme();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/30">
@@ -54,9 +55,9 @@ export default function Navbar() {
               )}
             </button>
 
-            <button className="hidden md:flex">
+            <Button className="hidden md:flex">
               Get Started
-            </button>
+            </Button>
 
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -90,7 +91,7 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          <button className="w-full">Get Started</button>
+          <Button className="w-full">Get Started</Button>
         </div>
       </div>
     </nav>

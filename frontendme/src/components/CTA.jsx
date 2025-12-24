@@ -1,4 +1,3 @@
-import React from "react";
 export default function CTA() {
   return (
     <section className="py-24 relative overflow-hidden">

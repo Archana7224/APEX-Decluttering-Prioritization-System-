@@ -1,5 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* LIGHT MODE */
-@import "tailwindcss";
 .light {
   --bg: #f8fafc;
   --card: #ffffff;
@@ -146,3 +149,10 @@ body {
 .delay-500 { animation-delay: 0.5s; }
 .delay-700 { animation-delay: 0.7s; }
 
+module.exports = {
+  darkMode: "class",
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
