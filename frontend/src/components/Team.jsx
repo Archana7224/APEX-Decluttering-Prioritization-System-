@@ -1,4 +1,5 @@
 import React from "react";
+
 const teamMembers = [
   { 
     name: "Aaditya Kapoor", 
@@ -28,20 +29,25 @@ const teamMembers = [
 
 export default function Team() {
   return (
-    <section id="team" className="py-24 relative">
+    <section id="team" className="py-24 relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 grid-bg opacity-50" />
 
       <div className="container mx-auto px-4 relative z-10">
         {/* Heading */}
         <div className="text-center mb-16 animate-fade-up">
-          <span className="text-primary font-medium text-sm uppercase tracking-wider">
+          <span className="text-cyan-400 font-medium text-sm uppercase tracking-wider">
             Our Team
           </span>
-          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
-            Meet the <span className="gradient-text">Minds Behind APEX</span>
+
+          <h2 className="font-display text-4xl md:text-5xl font-bold mt-4 mb-6 text-white">
+            Meet the{" "}
+            <span className="bg-gradient-to-r from-cyan-400 to-indigo-400 bg-clip-text text-transparent">
+              Minds Behind APEX
+            </span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+
+          <p className="text-slate-400 max-w-2xl mx-auto">
             A passionate team of developers and designers working to revolutionize your email experience.
           </p>
         </div>
@@ -53,23 +59,27 @@ export default function Team() {
               key={member.username}
               className="group transform transition duration-300 hover:-translate-y-2"
             >
-              <div className="glass-card p-6 text-center h-full hover:border-primary/50 transition-all duration-300 group-hover:glow-primary">
-                
+              <div
+                className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 text-center h-full
+                           transition-all duration-300 hover:border-cyan-400/40"
+              >
                 {/* Avatar */}
                 <div className="relative w-24 h-24 mx-auto mb-4">
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-primary to-accent opacity-20 group-hover:opacity-40 transition-opacity" />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-cyan-400 to-indigo-400 opacity-20 group-hover:opacity-40 transition-opacity" />
                   <img
                     src={`https://github.com/${member.username}.png`}
                     alt={member.name}
-                    className="w-24 h-24 rounded-full object-cover border-2 border-border group-hover:border-primary/50 transition-colors relative z-10"
+                    className="w-24 h-24 rounded-full object-cover border-2 border-white/10
+                               group-hover:border-cyan-400/50 transition-colors relative z-10"
                   />
                 </div>
 
                 {/* Info */}
-                <h3 className="font-display font-semibold text-lg mb-1">
+                <h3 className="font-display font-semibold text-lg mb-1 text-white">
                   {member.name}
                 </h3>
-                <p className="text-primary text-sm font-medium mb-3">
+
+                <p className="text-cyan-400 text-sm font-medium mb-3">
                   {member.role}
                 </p>
 
@@ -78,9 +88,8 @@ export default function Team() {
                   href={member.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors text-sm"
+                  className="inline-flex items-center gap-2 text-slate-400 hover:text-white transition-colors text-sm"
                 >
-                  {/* GitHub SVG Icon */}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
