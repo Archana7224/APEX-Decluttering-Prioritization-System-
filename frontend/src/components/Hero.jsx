@@ -44,7 +44,7 @@ export default function Hero() {
             </button>
 
             <button className="px-8 py-3 rounded-xl font-medium border gradient-border hover:bg-primary/10 transition-colors">
-              Watch Demo
+              Lauch Extension
             </button>
           </div>
 
