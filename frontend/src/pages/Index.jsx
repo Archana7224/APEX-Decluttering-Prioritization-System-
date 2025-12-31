@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/NavBar";
 import Hero from "../components/Hero";
+import Chatbot from "../components/Chatbot";
 import Features from "../components/Features";
 import Platforms from "../components/SmartPlatforms";
 import About from "../components/About";
@@ -16,6 +17,7 @@ export default function Index() {
 
       <main>
         <Hero />
+        <Chatbot />
         <Features />
         <Platforms />
         <About />
