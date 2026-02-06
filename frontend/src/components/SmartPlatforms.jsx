@@ -1,22 +1,33 @@
 import { Check, Mail } from "lucide-react";
 import React from "react";
 
+const BACKEND_URL = "http://localhost:5000";
+
 const platforms = [
   {
     name: "Gmail",
     description: "Full Google Workspace integration with real-time sync",
     features: ["Labels sync", "Priority inbox", "Smart compose suggestions"],
     color: "from-cyan-400 to-indigo-500",
+    enabled: true,
   },
   {
     name: "Outlook",
     description: "Seamless Microsoft 365 integration for enterprises",
     features: ["Focused inbox", "Categories sync", "Calendar integration"],
     color: "from-indigo-400 to-purple-500",
+    enabled: false,
   },
 ];
 
 export default function SmartPlatforms() {
+  const handleClick = (platform) => {
+    if (platform.enabled && platform.name === "Gmail") {
+      // Full page redirect → Flask → Google OAuth
+      window.location.href = `${BACKEND_URL}/login`;
+    }
+  };
+
   return (
     <section id="platforms" className="relative overflow-hidden py-24">
       {/* Background Glow */}
@@ -48,8 +59,14 @@ export default function SmartPlatforms() {
           {platforms.map((platform) => (
             <div
               key={platform.name}
-              className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 h-full
-                         transition-all duration-300 hover:border-cyan-400/40 hover:-translate-y-2"
+              onClick={() => handleClick(platform)}
+              className={`
+                group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 h-full
+                transition-all duration-300
+                ${platform.enabled
+                  ? "hover:border-cyan-400/40 hover:-translate-y-2 cursor-pointer"
+                  : "opacity-60 cursor-not-allowed"}
+              `}
             >
               {/* Icon */}
               <div
@@ -82,6 +99,17 @@ export default function SmartPlatforms() {
                   </li>
                 ))}
               </ul>
+
+              {/* CTA hint */}
+              {platform.enabled ? (
+                <p className="mt-6 text-sm text-cyan-400">
+                  Click to connect →
+                </p>
+              ) : (
+                <p className="mt-6 text-sm text-slate-500">
+                  Coming soon
+                </p>
+              )}
             </div>
           ))}
         </div>
